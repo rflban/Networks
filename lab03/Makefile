@@ -13,10 +13,10 @@ EXECS = ${CLIENT_EXEC_NAME} ${SERVER_EXEC_NAME}
 
 all: client server
 
-client:
+client: ${CLIENT_SRC}
 	${CC} ${CFLAGS} ${CLIENT_SRC} -o ${CLIENT_EXEC_NAME}
 
-server:
+server: ${SERVER_SRC}
 	${CC} ${CFLAGS} ${SERVER_SRC} -o ${SERVER_EXEC_NAME} ${TPOOL_SRC}
 
 clean:
